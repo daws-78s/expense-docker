@@ -10,7 +10,9 @@ services:
     image: mysql:v1.0.0
     container_name: mysql # --name mysql
     volumes:
-      - mysql:/var/lib/mysql # -v volume-name:/path/in/container
+    - source: mysql
+      target: /var/lib/mysql
+      type: volume # -v volume-name:/path/in/container
   backend:
     image: backend:v1.0.0
     container_name: backend
