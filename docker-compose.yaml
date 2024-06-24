@@ -1,4 +1,5 @@
 name: expense
+version: '3.8'
 networks:
   default:
     name: expense
