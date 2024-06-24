@@ -4,7 +4,9 @@ networks:
   default:
     name: expense
 volumes:
-  mysql: # docker volume create myqsl
+  mysql:
+    external: true
+       # docker volume create myqsl
 services:
   mysql:
     image: mysql:v1.0.0
