@@ -16,10 +16,10 @@ services:
       - MYSQL_USER=expense
       - MYSQL_PASSWORD=ExpenseApp@1
       - MYSQL_DATABASE=transactions
-    volumes:
-    - source: mysql
-      target: /var/lib/mysql
-      type: volume # -v volume-name:/path/in/container
+    # volumes:
+    # - source: mysql
+    #   target: /var/lib/mysql
+    #   type: volume # -v volume-name:/path/in/container
   backend:
     image: backend:v1.0
     container_name: backend
